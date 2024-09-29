@@ -51,7 +51,17 @@ int main()
 
     cout << "Fibonacci Series: ";
 
-    cout << t1 << " " << t2 << " ";
+    if(num_term == 1)
+    {
+        cout << t1 << " ";
+        return 0;
+    }
+    if(num_term == 2)
+    {
+        cout << t1 <<" " << t2 << " ";
+        return 0;;
+    }
+    cout << t1 <<" " << t2 <<" ";
 
     num_term = num_term - 2;
 
