@@ -9,6 +9,11 @@ int main()
     cin >> n;
     int n_copy = n;
 
+    if(n == 0)
+    {
+        cout << "Not Armstrong";
+        return 0;
+    }    
     // Count of Digits in n
     int numOfDigit = 0;
     while (n > 0)
@@ -41,19 +46,19 @@ int main()
 }
 
 // METHOD_2:
-//  #include <bits/stdc++.h>
-//  using namespace std;
+// // Program to check whether a number is Armstrong or not
 
-// int NumOfDigits(int n)
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int numOfDigits(int n)
 // {
 //     int count = 0;
-
-//     while (n > 0)
+//     while(n>0)
 //     {
-//         n = n / 10;
 //         count++;
+//         n = n / 10;
 //     }
-
 //     return count;
 // }
 
@@ -62,17 +67,22 @@ int main()
 //     int n;
 //     cin >> n;
 //     int n_copy = n;
-
-//     int num_digit = NumOfDigits(n);
-//     int sum = 0;
-//     while (n > 0)
+    
+//     if(n == 0)
 //     {
-//         int rem = n % 10;
-//         n = n/10;
-//         sum += pow(rem, num_digit);
+//         cout <<"Not Armstrong";
+//         return 0;
 //     }
-
-//     if (sum == n_copy)
+    
+//     int nod = numOfDigits(n);
+//     int sum = 0;
+//     while(n>0)
+//     {
+//         int lastDigit = n % 10;
+//         sum = sum + pow(lastDigit, nod);
+//         n /= 10;
+//     }
+//     if(sum == n_copy)
 //     {
 //         cout << "Armstrong";
 //     }
